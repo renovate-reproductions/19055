@@ -1,0 +1,34 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: rook-ceph
+generatorOptions:
+  annotations:
+    internal.hetzner.cloud/grafana-folder: Ceph
+  immutable: true
+  labels:
+    grafana_dashboard: ''
+configMapGenerator:
+- name: cephfs-overview
+  files: [cephfs-overview.json]
+- name: host-details
+  files: [host-details.json]
+- name: hosts-overview
+  files: [hosts-overview.json]
+- name: osd-device-details
+  files: [osd-device-details.json]
+- name: osds-overview
+  files: [osds-overview.json]
+- name: pool-detail
+  files: [pool-detail.json]
+- name: pool-overview
+  files: [pool-overview.json]
+- name: radosgw-detail
+  files: [radosgw-detail.json]
+- name: radosgw-overview
+  files: [radosgw-overview.json]
+- name: radosgw-sync-overview
+  files: [radosgw-sync-overview.json]
+- name: rbd-details
+  files: [rbd-details.json]
+- name: rbd-overview
+  files: [rbd-overview.json]
