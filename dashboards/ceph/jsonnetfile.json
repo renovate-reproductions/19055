@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "dependencies": [
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/ceph/ceph.git",
+          "subdir": "monitoring/ceph-mixin"
+        }
+      },
+      "version": "v18.0.0"
+    }
+  ],
+  "legacyImports": true
+}
